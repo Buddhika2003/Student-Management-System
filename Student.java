@@ -27,4 +27,8 @@ public class Student{
         return email;
     }
 
+    public String toString(){
+        return "Student name : "+name+"\nStudent ID : "+id+"\nCourse : "+course+"\nEmail : "+email;
+    }
+
 }
