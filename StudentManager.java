@@ -20,4 +20,25 @@ public class StudentManager{
             }
         }
     }
+
+    public void deleteStudent(int id){
+        boolean removed = students.removeIf(student -> student.getId() == id);
+
+        if(removed){
+            System.out.println("Student deleted successfully.");
+        }else{
+            System.out.println("Student not found.");
+        }
+    }
+
+    public void searchStudent(String name){
+        for(Student s : students){
+            if(s.getName().equalsIgnoreCase(name)){
+                System.out.println(s);
+                return;
+            }
+        }
+    
+        System.out.println("Student not found.");
+    }
 }
